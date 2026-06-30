@@ -1,1 +1,33 @@
+@font-face {
+    font-family: 'CameraPlainVariable';
+    src: url('https://cdn.gpteng.co/mcp-widgets/v1/fonts/CameraPlainVariable.woff2')
+         format('woff2');
+}
 
+#lovable-badge {
+    position: fixed;
+    bottom: 12px;
+    right: 12px;
+    display: flex;
+    align-items: center;
+
+    background: #1b1b1b;
+    color: #c5c1b9;
+
+    border-radius: 6px;
+    padding: 8px;
+
+    z-index: 1000000;
+}
+
+#lovable-badge-cta:hover {
+    background: rgba(255,255,255,.04);
+}
+
+#lovable-badge-close {
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+}
+
+/* ...many more lines styling only the Lovable badge... */
