@@ -3,106 +3,1107 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Climate Change Wiki</title>
+  <title>Climate Change: A Comprehensive Study</title>
   <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Bookman+Old+Style:wght@400;700&family=EB+Garamond:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Bookman Old Style', 'EB Garamond', serif;
+      line-height: 1.8;
+      color: #2c1810;
+      background: linear-gradient(135deg, #f5f1e8 0%, #e8dcc8 100%);
+      padding: 0;
+    }
+
+    .page-wrapper {
+      max-width: 1200px;
+      margin: 0 auto;
+      background: rgba(255, 248, 240, 0.95);
+      box-shadow: 0 0 60px rgba(0, 0, 0, 0.15);
+    }
+
+    /* HEADER */
+    header {
+      background: linear-gradient(135deg, #3d2817 0%, #5a3d2a 100%);
+      color: #f5f1e8;
+      padding: 60px 40px;
+      text-align: center;
+      border-bottom: 8px solid #8b6f47;
+      position: relative;
+    }
+
+    header::after {
+      content: '';
+      position: absolute;
+      bottom: -8px;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: repeating-linear-gradient(90deg, #d4af37 0px, #d4af37 20px, transparent 20px, transparent 40px);
+    }
+
+    h1 {
+      font-size: 3.5em;
+      margin-bottom: 15px;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+      letter-spacing: 2px;
+    }
+
+    header p {
+      font-size: 1.3em;
+      font-style: italic;
+      color: #e8dcc8;
+      margin-bottom: 10px;
+    }
+
+    .header-date {
+      font-size: 0.9em;
+      color: #c9a76d;
+      border-top: 2px solid #8b6f47;
+      padding-top: 10px;
+      margin-top: 15px;
+      display: inline-block;
+    }
+
+    /* NAVIGATION */
+    nav {
+      background-color: #5a3d2a;
+      padding: 0;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      border-bottom: 3px solid #8b6f47;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    nav a {
+      color: #f5f1e8;
+      padding: 18px 25px;
+      text-decoration: none;
+      font-size: 1.1em;
+      border-right: 1px solid #3d2817;
+      transition: all 0.3s ease;
+      position: relative;
+    }
+
+    nav a:last-child {
+      border-right: none;
+    }
+
+    nav a:hover {
+      background-color: #3d2817;
+      color: #d4af37;
+      padding-left: 35px;
+    }
+
+    /* MAIN CONTENT */
+    .container {
+      display: flex;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    /* SIDEBAR */
+    aside {
+      width: 280px;
+      background: linear-gradient(180deg, #f5f1e8 0%, #e8dcc8 100%);
+      padding: 40px 25px;
+      border-right: 5px solid #8b6f47;
+      position: sticky;
+      top: 100px;
+      height: fit-content;
+    }
+
+    aside h3 {
+      color: #3d2817;
+      font-size: 1.3em;
+      margin-bottom: 20px;
+      padding-bottom: 10px;
+      border-bottom: 2px solid #8b6f47;
+    }
+
+    aside ul {
+      list-style: none;
+    }
+
+    aside li {
+      margin-bottom: 12px;
+    }
+
+    aside a {
+      color: #5a3d2a;
+      text-decoration: none;
+      font-size: 0.95em;
+      display: block;
+      padding: 8px 12px;
+      border-left: 4px solid transparent;
+      transition: all 0.3s ease;
+    }
+
+    aside a:hover {
+      border-left: 4px solid #d4af37;
+      padding-left: 18px;
+      color: #3d2817;
+      background: rgba(212, 175, 55, 0.1);
+    }
+
+    /* MAIN CONTENT AREA */
+    main {
+      flex: 1;
+      padding: 50px 50px;
+    }
+
+    section {
+      margin-bottom: 60px;
+      page-break-inside: avoid;
+    }
+
+    h2 {
+      font-size: 2.2em;
+      color: #3d2817;
+      margin-bottom: 25px;
+      padding-bottom: 15px;
+      border-bottom: 4px solid #8b6f47;
+      position: relative;
+    }
+
+    h2::before {
+      content: '❋ ';
+      color: #d4af37;
+      margin-right: 10px;
+    }
+
+    h3 {
+      font-size: 1.5em;
+      color: #5a3d2a;
+      margin-top: 30px;
+      margin-bottom: 15px;
+      padding-left: 20px;
+      border-left: 5px solid #d4af37;
+    }
+
+    p {
+      font-size: 1.05em;
+      margin-bottom: 18px;
+      text-align: justify;
+      line-height: 1.9;
+    }
+
+    /* IMAGES */
+    img {
+      max-width: 100%;
+      height: auto;
+      margin: 30px 0;
+      border: 5px solid #8b6f47;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+      border-radius: 3px;
+    }
+
+    .image-caption {
+      font-size: 0.9em;
+      color: #5a3d2a;
+      font-style: italic;
+      margin-top: 10px;
+      text-align: center;
+      border-top: 1px solid #8b6f47;
+      padding-top: 10px;
+    }
+
+    /* LISTS */
+    ul, ol {
+      margin: 20px 0 20px 40px;
+      font-size: 1.05em;
+    }
+
+    li {
+      margin-bottom: 12px;
+      line-height: 1.8;
+    }
+
+    ul li::marker {
+      color: #d4af37;
+      font-weight: bold;
+    }
+
+    /* DATA BOXES */
+    .data-box {
+      background: linear-gradient(135deg, #faf6f0 0%, #f0e8dc 100%);
+      border: 3px solid #8b6f47;
+      border-left: 8px solid #d4af37;
+      padding: 25px;
+      margin: 25px 0;
+      border-radius: 3px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .data-box h4 {
+      color: #3d2817;
+      font-size: 1.2em;
+      margin-bottom: 15px;
+      font-weight: bold;
+    }
+
+    .stat-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      margin: 25px 0;
+    }
+
+    .stat-card {
+      background: #faf6f0;
+      padding: 25px;
+      border: 3px solid #8b6f47;
+      text-align: center;
+      border-radius: 3px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    }
+
+    .stat-number {
+      font-size: 2.5em;
+      color: #d4af37;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .stat-label {
+      font-size: 1em;
+      color: #5a3d2a;
+      font-style: italic;
+    }
+
+    /* BLOCKQUOTE */
+    blockquote {
+      background: linear-gradient(135deg, #fff8f0 0%, #f5ede0 100%);
+      border-left: 8px solid #d4af37;
+      padding: 25px;
+      margin: 30px 0;
+      font-style: italic;
+      color: #3d2817;
+      font-size: 1.1em;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    }
+
+    blockquote::before {
+      content: '"';
+      font-size: 3em;
+      color: #d4af37;
+      position: relative;
+      top: 10px;
+      margin-right: 10px;
+    }
+
+    /* TIMELINE */
+    .timeline {
+      position: relative;
+      padding: 30px 0;
+      margin: 40px 0;
+    }
+
+    .timeline::before {
+      content: '';
+      position: absolute;
+      left: 30px;
+      top: 0;
+      bottom: 0;
+      width: 4px;
+      background: #8b6f47;
+    }
+
+    .timeline-item {
+      margin-left: 100px;
+      padding-bottom: 40px;
+      position: relative;
+    }
+
+    .timeline-item::before {
+      content: '';
+      position: absolute;
+      left: -60px;
+      top: 5px;
+      width: 20px;
+      height: 20px;
+      background: #d4af37;
+      border: 4px solid #f5f1e8;
+      border-radius: 50%;
+      box-shadow: 0 0 0 4px #8b6f47;
+    }
+
+    .timeline-year {
+      font-size: 1.3em;
+      font-weight: bold;
+      color: #d4af37;
+      margin-bottom: 5px;
+    }
+
+    .timeline-content {
+      background: linear-gradient(135deg, #faf6f0 0%, #f0e8dc 100%);
+      padding: 20px;
+      border-left: 4px solid #8b6f47;
+    }
+
+    /* FOOTER */
+    footer {
+      background: linear-gradient(135deg, #3d2817 0%, #5a3d2a 100%);
+      color: #f5f1e8;
+      text-align: center;
+      padding: 40px;
+      border-top: 8px solid #8b6f47;
+      font-size: 1em;
+    }
+
+    footer p {
+      margin-bottom: 10px;
+      text-align: center;
+    }
+
+    .footer-divider {
+      color: #d4af37;
+      font-size: 1.5em;
+      margin: 10px 0;
+    }
+
+    /* TABLE */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 25px 0;
+      background: #faf6f0;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    th {
+      background: #3d2817;
+      color: #f5f1e8;
+      padding: 18px;
+      text-align: left;
+      font-size: 1.05em;
+      border: 2px solid #8b6f47;
+    }
+
+    td {
+      padding: 15px 18px;
+      border: 1px solid #8b6f47;
+      border-bottom: 2px solid #8b6f47;
+    }
+
+    tr:hover {
+      background: #f0e8dc;
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 768px) {
+      .container {
+        flex-direction: column;
+      }
+
+      aside {
+        width: 100%;
+        border-right: none;
+        border-bottom: 5px solid #8b6f47;
+        position: static;
+      }
+
+      main {
+        padding: 30px 20px;
+      }
+
+      h1 {
+        font-size: 2.2em;
+      }
+
+      h2 {
+        font-size: 1.7em;
+      }
+
+      nav {
+        flex-direction: column;
+      }
+
+      nav a {
+        border-right: none;
+        border-bottom: 1px solid #3d2817;
+      }
+
+      .stat-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
 </head>
 
 <body>
 
-  <div class="container">
+  <div class="page-wrapper">
 
-    <!-- SIDEBAR -->
-    <aside class="sidebar">
-      <h2>Climate Wiki</h2>
+    <!-- HEADER -->
+    <header>
+      <h1>CLIMATE CHANGE</h1>
+      <p>A Comprehensive Examination of Earth's Greatest Environmental Challenge</p>
+      <div class="header-date">Published 2026</div>
+    </header>
+
+    <!-- NAVIGATION -->
+    <nav>
       <a href="#overview">Overview</a>
+      <a href="#what-is-climate">What is Climate Change?</a>
       <a href="#causes">Causes</a>
-      <a href="#effects">Effects</a>
-      <a href="#solutions">Solutions</a>
-      <a href="#evidence">Evidence</a>
-    </aside>
+      <a href="#evidence">Scientific Evidence</a>
+      <a href="#effects">Effects & Impacts</a>
+      <a href="#timeline">Historical Timeline</a>
+      <a href="#solutions">Solutions & Actions</a>
+      <a href="#future">Future Outlook</a>
+    </nav>
 
-    <!-- MAIN -->
-    <main class="content">
+    <div class="container">
 
-      <header class="header">
-        <h1>Climate Change</h1>
-        <p>A global environmental issue affecting Earth’s climate system</p>
-      </header>
-
-      <!-- OVERVIEW -->
-      <section id="overview">
-        <h2>Overview</h2>
-
-        <img src="https://images.unsplash.com/photo-1501004318641-b39e6451bec6?auto=format&fit=crop&w=1400&q=80" alt="Earth" />
-
-        <p>
-          Climate change refers to long-term changes in temperature and weather patterns.
-          Human activities like burning fossil fuels are the main cause of recent changes.
-        </p>
-      </section>
-
-      <!-- CAUSES -->
-      <section id="causes">
-        <h2>Causes</h2>
-
-        <img src="https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?auto=format&fit=crop&w=1400&q=80" alt="Pollution" />
-
+      <!-- SIDEBAR -->
+      <aside>
+        <h3>Contents</h3>
         <ul>
-          <li>Burning fossil fuels (coal, oil, gas)</li>
-          <li>Deforestation</li>
-          <li>Industrial emissions</li>
-          <li>Transport pollution</li>
+          <li><a href="#overview">1. Overview</a></li>
+          <li><a href="#what-is-climate">2. What is Climate Change?</a></li>
+          <li><a href="#causes">3. Primary Causes</a></li>
+          <li><a href="#evidence">4. Scientific Evidence</a></li>
+          <li><a href="#effects">5. Effects & Impacts</a></li>
+          <li><a href="#timeline">6. Historical Timeline</a></li>
+          <li><a href="#solutions">7. Solutions & Actions</a></li>
+          <li><a href="#future">8. Future Outlook</a></li>
         </ul>
-      </section>
+      </aside>
 
-      <!-- EFFECTS -->
-      <section id="effects">
-        <h2>Effects</h2>
+      <!-- MAIN CONTENT -->
+      <main>
 
-        <img src="https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?auto=format&fit=crop&w=1400&q=80" alt="Flooding" />
+        <!-- OVERVIEW -->
+        <section id="overview">
+          <h2>Overview</h2>
+          
+          <img src="https://images.unsplash.com/photo-1501004318641-b39e6451bec6?auto=format&fit=crop&w=1000&q=80" alt="Earth from space">
+          <p class="image-caption">Our planet Earth from space, showing the intricate systems affected by climate change</p>
 
-        <ul>
-          <li>Rising sea levels</li>
-          <li>Extreme weather events</li>
-          <li>Wildfires</li>
-          <li>Loss of wildlife habitats</li>
-        </ul>
-      </section>
+          <p>
+            Climate change stands as one of the most pressing environmental issues facing humanity in the twenty-first century. The scientific consensus is overwhelming and unequivocal: the Earth's climate is warming, and human activities are the primary driver of this unprecedented change. Since the pre-industrial era, global surface temperatures have risen by approximately 1.1°C, a seemingly modest figure that belies catastrophic consequences for ecosystems and human societies worldwide.
+          </p>
 
-      <!-- SOLUTIONS -->
-      <section id="solutions">
-        <h2>Solutions</h2>
+          <p>
+            The effects are no longer confined to abstract projections or distant futures. We witness them in real time: melting glaciers, rising sea levels, intensifying hurricanes, devastating wildfires, prolonged droughts, and unpredictable weather patterns. From the Arctic to the tropics, from the depths of the ocean to the highest mountains, the signature of climate change is written across every corner of our planet.
+          </p>
 
-        <img src="https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&w=1400&q=80" alt="Solar panels" />
+          <div class="stat-grid">
+            <div class="stat-card">
+              <div class="stat-number">1.1°C</div>
+              <div class="stat-label">Global Temperature Rise Since 1850</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-number">50%</div>
+              <div class="stat-label">Arctic Sea Ice Loss</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-number">8.6"</div>
+              <div class="stat-label">Sea Level Rise Since 1880</div>
+            </div>
+          </div>
+        </section>
 
-        <ul>
-          <li>Use renewable energy</li>
-          <li>Reduce plastic waste</li>
-          <li>Plant more trees</li>
-          <li>Use public transport</li>
-        </ul>
-      </section>
+        <!-- WHAT IS CLIMATE CHANGE -->
+        <section id="what-is-climate">
+          <h2>What is Climate Change?</h2>
 
-      <!-- EVIDENCE -->
-      <section id="evidence">
-        <h2>Scientific Evidence</h2>
+          <h3>Defining the Phenomenon</h3>
 
-        <p>
-          Scientists use satellites, ice cores, and weather data to track climate change.
-        </p>
+          <p>
+            Climate change refers to long-term shifts in global temperatures and weather patterns that persist over decades, centuries, or longer. While Earth's climate has naturally fluctuated throughout geological history, the current period of warming is distinctly different: it is rapid, global in scale, and directly attributable to human actions, particularly the emission of greenhouse gases.
+          </p>
 
-        <ul>
-          <li>Global temperatures are rising</li>
-          <li>Ice sheets are melting</li>
-          <li>Sea levels are increasing</li>
-        </ul>
-      </section>
+          <blockquote>
+            "The climate system is interconnected. What happens to the atmosphere affects the oceans, which affects the land, which affects the ecosystems, and ultimately affects humanity."
+          </blockquote>
 
-      <footer>
-        <p>© 2026 Climate Wiki (GitHub Pages Project)</p>
-      </footer>
+          <h3>Climate vs. Weather</h3>
 
-    </main>
+          <p>
+            A crucial distinction must be made between climate and weather. Weather describes the short-term atmospheric conditions in a specific location—whether today will be sunny or rainy, hot or cold. Climate, by contrast, refers to the long-term pattern of weather in a particular region or globally, typically measured over 30 years or more. While individual weather events may vary unpredictably from day to day, climate patterns reveal systematic trends when averaged over time.
+          </p>
+
+          <p>
+            The greenhouse effect itself is a natural and essential process. Without it, Earth would be far too cold to support complex life. However, human activities have intensified this effect dramatically, trapping more heat in the atmosphere than ever before in human history. The burning of fossil fuels—coal, oil, and natural gas—releases carbon dioxide that accumulated over millions of years in the span of mere decades, disrupting the delicate atmospheric balance that evolved over millennia.
+          </p>
+
+          <div class="data-box">
+            <h4>Key Greenhouse Gases</h4>
+            <ul>
+              <li><strong>Carbon Dioxide (CO₂):</strong> The primary greenhouse gas, accounting for roughly 75% of all anthropogenic greenhouse gas emissions</li>
+              <li><strong>Methane (CH₄):</strong> 25-28 times more potent than CO₂ over a 100-year period; released from agriculture, landfills, and fossil fuel extraction</li>
+              <li><strong>Nitrous Oxide (N₂O):</strong> Primarily from agricultural practices and industrial processes</li>
+              <li><strong>Fluorinated Gases:</strong> Used in refrigeration and air conditioning systems</li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- CAUSES -->
+        <section id="causes">
+          <h2>Primary Causes of Climate Change</h2>
+
+          <img src="https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?auto=format&fit=crop&w=1000&q=80" alt="Industrial pollution">
+          <p class="image-caption">Industrial emissions represent a significant contributor to greenhouse gas concentrations</p>
+
+          <h3>Fossil Fuel Combustion</h3>
+
+          <p>
+            The burning of fossil fuels for energy represents the single largest source of anthropogenic greenhouse gas emissions, accounting for approximately 73% of global emissions. When coal, petroleum, and natural gas are combusted for electricity generation, heating, transportation, and industrial processes, they release carbon dioxide that has been sequestered underground for hundreds of millions of years. Annually, this releases roughly 36 billion tons of CO₂ into the atmosphere.
+          </p>
+
+          <p>
+            Coal mining and burning is particularly problematic, as coal is the most carbon-intensive fuel. Oil extraction and refining contributes significantly through both direct combustion and methane leakage. Natural gas, while cleaner than coal, still represents a major source of emissions and has slowed the transition away from fossil fuels in many nations.
+          </p>
+
+          <h3>Deforestation and Land Use Change</h3>
+
+          <p>
+            Forests act as the Earth's lungs, absorbing enormous quantities of carbon dioxide through photosynthesis and storing carbon in their biomass. When forests are cleared for agriculture, urban development, or timber extraction, this stored carbon is released into the atmosphere, and the planet loses a crucial mechanism for removing CO₂. Approximately 10-15 billion trees are cut down annually, with tropical rainforests being particularly vulnerable.
+          </p>
+
+          <p>
+            The conversion of forests to agricultural land, especially cattle ranching and palm oil plantations, contributes both through deforestation itself and through methane emissions from livestock. The destruction of peatlands is particularly damaging, as peat contains vast stores of carbon accumulated over millennia.
+          </p>
+
+          <h3>Industrial Processes and Manufacturing</h3>
+
+          <p>
+            Heavy industry—including cement, steel, and chemical production—accounts for nearly 30% of global greenhouse gas emissions. The production of cement alone generates 5-8% of global CO₂ emissions, as the chemical process of calcination inherently releases CO₂ regardless of the energy source used.
+          </p>
+
+          <p>
+            Chemical manufacturing produces multiple greenhouse gases beyond CO₂, including fluorinated compounds used in refrigeration. As global manufacturing has expanded, particularly in developing nations, industrial emissions have grown exponentially.
+          </p>
+
+          <h3>Agriculture and Livestock Production</h3>
+
+          <p>
+            Agriculture contributes approximately 14% of global greenhouse gas emissions through multiple pathways. Livestock farming, particularly cattle ranching, produces significant methane through enteric fermentation—the digestive process of ruminant animals. A single cow can produce 200-500 liters of methane daily.
+          </p>
+
+          <p>
+            Additionally, agricultural practices have degraded soils, reducing their carbon storage capacity, and the use of synthetic fertilizers releases nitrous oxide, a potent greenhouse gas nearly 300 times more powerful than CO₂ over a century.
+          </p>
+
+          <h3>Energy Consumption and Transportation</h3>
+
+          <p>
+            Transportation accounts for approximately 14% of global greenhouse gas emissions, with the vast majority coming from fossil fuel-powered vehicles. As global vehicle ownership has increased, so have transportation-related emissions. Aviation and maritime shipping contribute significantly, with aviation alone responsible for 2-3% of global emissions and growing.
+          </p>
+
+          <p>
+            Residential and commercial building energy use generates substantial emissions through heating, cooling, and electricity consumption, particularly in regions with cold winters.
+          </p>
+
+          <div class="data-box">
+            <h4>Emission Sources by Sector (Global)</h4>
+            <table>
+              <tr>
+                <th>Sector</th>
+                <th>Percentage of Emissions</th>
+                <th>Primary Activities</th>
+              </tr>
+              <tr>
+                <td>Energy Production & Use</td>
+                <td>73%</td>
+                <td>Electricity, heat, transportation, manufacturing</td>
+              </tr>
+              <tr>
+                <td>Agriculture, Forestry & Land Use</td>
+                <td>18%</td>
+                <td>Farming, livestock, deforestation</td>
+              </tr>
+              <tr>
+                <td>Industrial Processes</td>
+                <td>5%</td>
+                <td>Cement, steel, chemicals</td>
+              </tr>
+              <tr>
+                <td>Waste</td>
+                <td>4%</td>
+                <td>Landfills, wastewater</td>
+              </tr>
+            </table>
+          </div>
+        </section>
+
+        <!-- SCIENTIFIC EVIDENCE -->
+        <section id="evidence">
+          <h2>Scientific Evidence</h2>
+
+          <img src="https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?auto=format&fit=crop&w=1000&q=80" alt="Glacial landscape">
+          <p class="image-caption">Glaciers worldwide are retreating at unprecedented rates, providing visible evidence of climate change</p>
+
+          <h3>Temperature Records</h3>
+
+          <p>
+            Modern instrumental temperature records span approximately 150 years and show unequivocal warming. Global average surface temperature has increased by roughly 1.1°C since pre-industrial times, with most of this warming occurring in the last 50 years. The decade from 2010-2019 was the warmest on record, with 2020 and 2023 competing for the warmest year ever measured.
+          </p>
+
+          <p>
+            The warming is not uniform—land surfaces warm faster than oceans, and the Arctic experiences approximately twice the global average warming rate, a phenomenon called Arctic amplification. This disproportionate Arctic warming destabilizes the polar jet stream, contributing to extreme weather patterns at lower latitudes.
+          </p>
+
+          <h3>Atmospheric Carbon Dioxide Measurements</h3>
+
+          <p>
+            Direct measurements of atmospheric CO₂ have been conducted continuously since 1958 at Mauna Loa Observatory in Hawaii. These measurements demonstrate a steady and relentless increase from 315 parts per million (ppm) in 1958 to over 420 ppm in 2024. This represents a 33% increase in just 66 years.
+          </p>
+
+          <p>
+            Ice core records extending back 800,000 years show that CO₂ concentrations have naturally fluctuated between 170 and 280 ppm over the past 800 millennia—yet the current level of 420+ ppm is unprecedented in that entire period. This provides powerful evidence that current CO₂ levels are abnormal by any historical standard.
+          </p>
+
+          <h3>Isotopic Evidence</h3>
+
+          <p>
+            Chemical analysis reveals that the carbon in atmospheric CO₂ comes primarily from fossil fuels. Carbon isotopes have distinct signatures depending on their origin—fossil fuel carbon has a different isotopic composition than CO₂ from ocean outgassing or vegetation. Isotopic measurements confirm that 40-50% of the atmospheric CO₂ increase since pre-industrial times comes from fossil fuel burning, with the remainder from land use changes.
+          </p>
+
+          <h3>Glacial Retreat</h3>
+
+          <p>
+            Glaciers worldwide are retreating at alarming rates. Since 1980, mountain glaciers have lost approximately 9 trillion tons of ice. The Greenland ice sheet loses approximately 280 billion tons of ice annually, while the Antarctic ice sheet loses roughly 150 billion tons yearly. These losses have accelerated substantially in recent decades and directly contribute to sea level rise.
+          </p>
+
+          <p>
+            Before-and-after photographs of iconic glaciers—such as the Aletsch Glacier in Switzerland, the Grinnell Glacier in Montana, and the Franz Josef Glacier in New Zealand—document dramatic retreat over the past century. Most of the world's remaining mountain glaciers will disappear within this century under current warming trajectories.
+          </p>
+
+          <h3>Sea Level Rise</h3>
+
+          <p>
+            Global sea levels have risen approximately 8-9 inches (21-24 cm) since 1880, with the rate of rise accelerating. Between 1993 and 2023, sea levels rose at an average rate of 3.4 mm per year, roughly double the rate over the preceding century. This is driven by two mechanisms: thermal expansion of warming ocean water and melting of glaciers and ice sheets.
+          </p>
+
+          <p>
+            Satellite measurements since 1993 have provided unprecedented precision in documenting this rise. Current projections suggest sea levels could rise 1-4 feet by 2100, depending on greenhouse gas emission scenarios, threatening island nations and coastal cities globally.
+          </p>
+
+          <h3>Ocean Acidification</h3>
+
+          <p>
+            The oceans have absorbed approximately 30% of anthropogenic CO₂ emissions, which slows atmospheric warming but comes at a cost. When CO₂ dissolves in seawater, it forms carbonic acid, lowering the pH of the ocean. Ocean acidity has increased by 30% since the beginning of the Industrial Revolution, representing a more rapid change than at any point in the past 55 million years.
+          </p>
+
+          <p>
+            This acidification threatens marine ecosystems, particularly shell-forming organisms like corals, pteropods, and mollusks that struggle to build shells in more acidic conditions. The entire marine food web is threatened by this chemical change.
+          </p>
+
+          <h3>Atmospheric Moisture and Extreme Weather</h3>
+
+          <p>
+            A warmer atmosphere holds approximately 7% more moisture per degree Celsius of warming, intensifying the hydrological cycle. Satellite measurements confirm that atmospheric water vapor has increased by about 4% since 1988. This contributes to more intense precipitation events—a phenomenon supported by both theory and observation.
+          </p>
+
+          <p>
+            Simultaneously, heat domes and droughts are intensifying in some regions. The interplay of increased atmospheric moisture and regional heating patterns creates conditions for more extreme weather events in both directions.
+          </p>
+
+          <div class="data-box">
+            <h4>Observational Evidence Summary</h4>
+            <ul>
+              <li><strong>Temperature:</strong> 1.1°C increase since 1880s; 0.18°C per decade over past 55 years</li>
+              <li><strong>CO₂ Levels:</strong> 420+ ppm in 2024, up from 315 ppm in 1958</li>
+              <li><strong>Sea Level:</strong> 8-9 inches rise since 1880; rate accelerating</li>
+              <li><strong>Arctic Sea Ice:</strong> Declining at 13% per decade; summer ice nearly 50% smaller than 1979</li>
+              <li><strong>Glaciers:</strong> Losing 280+ billion tons of ice annually</li>
+              <li><strong>Ocean pH:</strong> Increased acidity of 30% since pre-industrial era</li>
+              <li><strong>Extreme Heat:</strong> Heat waves becoming more frequent, intense, and longer-lasting</li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- EFFECTS AND IMPACTS -->
+        <section id="effects">
+          <h2>Effects and Impacts of Climate Change</h2>
+
+          <h3>Ecosystem Disruption</h3>
+
+          <p>
+            Climate change is fundamentally restructuring ecosystems across the globe. Species are shifting their ranges poleward and to higher elevations as they attempt to track suitable climate conditions. Phenological changes—shifts in the timing of natural events—are disrupting the finely-tuned relationships between species that have co-evolved over millennia.
+          </p>
+
+          <p>
+            Spring arrives earlier for many plants and migratory animals, potentially creating mismatches between predators and prey, or pollinators and flowering plants. Trees are blooming before insects have emerged to pollinate them, and birds are arriving to breeding grounds after insects have peaked in abundance. These temporal mismatches threaten food chains and ecosystem stability.
+          </p>
+
+          <p>
+            Extinction rates are accelerating. Habitats are being destroyed by sea level rise, changing precipitation patterns, and extreme heat. Species with limited ranges—particularly those on mountains or isolated islands—face the prospect of habitat loss as climatic zones shift. Coral reefs, the rainforests of the sea, face catastrophic impacts from warming and acidification.
+          </p>
+
+          <h3>Biodiversity Loss</h3>
+
+          <p>
+            Climate change acts as an accelerant on extinction rates already elevated by habitat destruction, pollution, and overharvesting. Studies suggest that without significant climate action, 20-30% of species globally could face extinction by 2050. Polar species face particularly acute threats as Arctic sea ice continues its decline.
+          </p>
+
+          <p>
+            Marine biodiversity is threatened not only by warming but by oxygen-depleted "dead zones" expanding in coastal waters due to combined effects of warming, agricultural runoff, and reduced circulation. Mountain ecosystems face a "compression of habitats" as species squeeze into smaller areas suitable to their climate needs.
+          </p>
+
+          <h3>Agricultural Impacts</h3>
+
+          <p>
+            Global agriculture, the foundation of food security for 8 billion people, faces profound challenges from climate change. Shifts in precipitation and temperature alter growing seasons, increase disease and pest pressure, and reduce yields of critical crops. Wheat, rice, corn, and soy—crops that feed humanity—all face significant yield reductions under warming scenarios.
+          </p>
+
+          <p>
+            Water stress is increasing in many agricultural regions as glaciers that feed major river systems melt and precipitation patterns shift. The Monsoon patterns that affect billions of people in Asia show signs of disruption. Soil degradation accelerates in drought-affected regions, threatening long-term agricultural productivity.
+          </p>
+
+          <p>
+            Rising CO₂ concentrations actually reduce the nutritional content of staple crops—rice, wheat, and legumes all show reduced zinc, iron, and protein content under elevated CO₂ conditions. This means that even with unchanged food quantities, nutritional security may decline.
+          </p>
+
+          <h3>Water Resources</h3>
+
+          <p>
+            Climate change disrupts the global water cycle in profound ways. Glacial melt in the Himalayas, Rocky Mountains, and Andes threatens water security for billions of people dependent on glacial-fed rivers. As glaciers disappear, initially increasing water flow due to melting accelerates, but eventually decreases dramatically when glaciers are largely gone.
+          </p>
+
+          <p>
+            Changing precipitation patterns create both floods and droughts in different regions. The Mediterranean, Southwest United States, and Central Asia face increasing aridity, while other regions experience intensified rainfall and flooding. Groundwater aquifers accumulated over millennia are being depleted faster than they recharge.
+          </p>
+
+          <p>
+            Sea level rise and storm surge threaten freshwater aquifers in low-lying coastal regions through saltwater intrusion, making previously fresh groundwater brackish and unsuitable for drinking or irrigation.
+          </p>
+
+          <h3>Weather Extremes and Natural Disasters</h3>
+
+          <p>
+            A warming atmosphere and ocean create conditions conducive to more intense hurricanes, typhoons, and cyclones. While the frequency may not increase dramatically, the intensity of the strongest storms increases. Storm surge from these intense systems combines with elevated sea levels to create catastrophic flooding.
+          </p>
+
+          <p>
+            Heat waves are becoming more frequent, intense, and longer-lasting. The Pacific Northwest heat dome of 2021 broke temperature records by unprecedented margins, causing mass mortality in salmon and other aquatic species. Flash droughts develop rapidly in response to heat and changing precipitation, devastating agriculture and creating water emergencies.
+          </p>
+
+          <p>
+            Wildfire season lengthens as snowmelt occurs earlier and drier conditions persist longer. Mega-fires that extend across millions of acres are becoming more common, producing smoke that reduces air quality over vast regions. The 2020 Australian bushfires burned an area larger than many countries, destroying ecosystems that took centuries to develop.
+          </p>
+
+          <h3>Human Health Impacts</h3>
+
+          <p>
+            Climate change threatens human health through multiple pathways. Direct impacts include increased mortality from heat stress, particularly among vulnerable populations—the elderly, outdoor workers, and those without adequate cooling. Heat-related deaths have increased globally.
+          </p>
+
+          <p>
+            Indirect impacts include expanding ranges of disease-carrying insects like mosquitoes and ticks, increasing geographic spread of diseases like dengue fever, Zika virus, and Lyme disease. Air quality degrades from increased wildfire smoke and ground-level ozone formation in a warmer climate. Mental health impacts from climate anxiety, displacement, and community trauma are increasingly recognized.
+          </p>
+
+          <p>
+            Nutritional impacts arise from reduced agricultural yields and nutritional content of crops. Water-borne diseases may expand if water systems become contaminated. Pollution increases in concentrated regions as industries adapt to climate impacts.
+          </p>
+
+          <h3>Economic Impacts</h3>
+
+          <p>
+            Climate change imposes enormous economic costs through infrastructure damage from extreme weather, agricultural losses, reduced worker productivity in excessive heat, health care expenses, and the costs of adaptation and disaster recovery. The World Bank estimates that unmitigated climate change could reduce global GDP by 10% or more by 2100.
+          </p>
+
+          <p>
+            Some regions will face disproportionate impacts. Low-income nations bear the greatest burden despite contributing least to the problem. Island nations face potential inundation; tropical agricultural regions face yield declines; coastal megacities face storm surge and infrastructure threats.
+          </p>
+
+          <p>
+            Financial systems face climate-related risks from stranded assets (fossil fuel infrastructure that becomes uneconomical), supply chain disruptions, and physical damage to infrastructure. Insurance markets may become destabilized by unpredictable and catastrophic losses.
+          </p>
+
+          <h3>Social Instability and Migration</h3>
+
+          <p>
+            Environmental stress from climate change can exacerbate existing social tensions and contribute to conflict. Water scarcity, food insecurity, and economic decline can drive mass migration. Climate migration could involve hundreds of millions of people by 2050, creating profound humanitarian and geopolitical challenges.
+          </p>
+
+          <p>
+            Indigenous communities and developing nations, which have contributed least to the problem, face the most severe impacts. Traditional territories become uninhabitable, cultural practices become impossible, and economic systems based on natural resources face collapse.
+          </p>
+        </section>
+
+        <!-- TIMELINE -->
+        <section id="timeline">
+          <h2>Historical Timeline of Climate Change Understanding</h2>
+
+          <div class="timeline">
+            <div class="timeline-item">
+              <div class="timeline-year">1859</div>
+              <div class="timeline-content">
+                <strong>John Tyndall</strong> demonstrates that CO₂ and methane trap heat, laying the scientific foundation for understanding the greenhouse effect.
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <div class="timeline-year">1896</div>
+              <div class="timeline-content">
+                <strong>Svante Arrhenius</strong> calculates that doubling CO₂ would raise global temperatures by 5-6°C—remarkably close to modern projections. He warns that industrial coal use could warm the planet.
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <div class="timeline-year">1938</div>
+              <div class="timeline-content">
+                <strong>Guy Stewart Callendar</strong> links atmospheric CO₂ increase to industrial emissions and proposes that this could cause global warming—initially dismissed by the scientific community.
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <div class="timeline-year">1958</div>
+              <div class="timeline-content">
+                <strong>Charles David Keeling</strong> begins precise measurements of atmospheric CO₂ at Mauna Loa, establishing the foundation for modern climate monitoring. The "Keeling Curve" becomes the iconic symbol of rising CO₂.
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <div class="timeline-year">1972</div>
+              <div class="timeline-content">
+                <strong>First UN Environment Program conference</strong> held in Stockholm, beginning international dialogue on environmental protection.
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <div class="timeline-year">1975-1980</div>
+              <div class="timeline-content">
+                <strong>Rapid scientific consensus builds</strong> as atmospheric CO₂ measurements accelerate and climate models improve, with warnings appearing in mainstream scientific journals.
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <div class="timeline-year">1988</div>
+              <div class="timeline-content">
+                <strong>IPCC (Intergovernmental Panel on Climate Change) established</strong> by the UN to assess climate change science. <strong>James Hansen's Congressional testimony</strong> brings climate change to public and political attention.
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <div class="timeline-year">1992</div>
+              <div class="timeline-content">
+                <strong>UN Framework Convention on Climate Change (UNFCCC)</strong> adopted at Rio Earth Summit, committing nations to reducing greenhouse gas emissions.
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <div class="timeline-year">1997</div>
+              <div class="timeline-content">
+                <strong>Kyoto Protocol adopted</strong>, the first major international agreement with binding emissions reduction targets. Industrialized nations commit to reducing emissions by average of 5% below 1990 levels.
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <div class="timeline-year">2007</div>
+              <div class="timeline-content">
+                <strong>IPCC Fourth Assessment Report</strong> concludes that warming of the climate system is "unequivocal" and states that it is "very likely" (>90% probability) that human activities are causing climate change.
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <div class="timeline-year">2009</div>
+              <div class="timezone-content">
+                <strong>Copenhagen Climate Conference</strong> attempts but fails to reach a binding global agreement on emissions reductions.
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <div class="timeline-year">2015</div>
+              <div class="timeline-content">
+                <strong>Paris Agreement adopted</strong>, committing nearly all nations to limiting global warming to well below 2°C above pre-industrial levels, with efforts to limit it to 1.5°C.
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <div class="timeline-year">2018</div>
+              <div class="timeline-content">
+                <strong>IPCC Special Report on 1.5°C</strong> warns that achieving 1.5°C target requires "rapid, far-reaching" transitions in energy, land use, infrastructure, and industrial systems.
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <div class="timeline-year">2021</div>
+              <div class="timeline-content">
+                <strong>IPCC Sixth Assessment Report</strong> states unequivocally that climate change is "unambiguously caused by human influence" and that every increment of additional warming matters.
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <div class="timeline-year">2023-2024</div>
+              <div class="timeline-content">
+                <strong>Global temperatures reach new records</strong> multiple times, intensifying urgency of climate action. COP28 acknowledges for first time the need to "transition away from fossil fuels."
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- SOLUTIONS -->
+        <section id="solutions">
+          <h2>Solutions and Actions</h2>
+
+          <img src="https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?auto=format&fit=crop&w=1000&q=80" alt="Renewable energy installation">
+          <p class="image-caption">Solar and wind installations represent key components of the energy transition</p>
+
+          <h3>Energy Transition</h3>
+
+          <p>
+            The fundamental solution to climate change requires transitioning away from fossil fuels to renewable energy sources. Solar photovoltaic and wind energy technologies have become increasingly cost-competitive with fossil fuels and require deployment at unprecedented scale.
+          </p>
+
+          <p>
+            Renewable energy capacity has grown exponentially, but must expand far more rapidly to displace fossil fuels in electricity generation, heating, and transportation. Battery storage technology is crucial for managing intermittency of renewable sources. Grid modernization and long-distance transmission infrastructure must be developed to distribute renewable energy efficiently.
+          </p>
+
+          <h3>Carbon Capture and Storage</h3>
+
+          <p>
+            Direct air capture (DAC) technology removes CO₂ directly from the atmosphere, though current costs remain high. Point-source carbon capture at industrial facilities and power plants is more economical and should be deployed where technically feasible. However, captured carbon must be permanently stored or utilized productively—geological sequestration requires long-term monitoring and regulatory framework.
+          </p>
+
+          <h3>Reforestation and Nature-Based Solutions</h3>
+
+          <p>
+            Protecting existing forests and restoring degraded lands through reforestation offers a natural, cost-effective means of carbon sequestration while also providing biodiversity and livelihood benefits. Globally, potential exists to sequester 37 Gt of CO₂ equivalent annually through forest conservation and restoration by 2050.
+          </p>
+
+          <p>
+            Protecting peatlands and mangrove wetlands, restoring grasslands, and protecting seagrass meadows all contribute to natural carbon storage. These nature-based solutions typically cost $10-100 per ton of CO₂ sequestered—far cheaper than technological carbon removal.
+          </p>
+
+          <h3>Agricultural Transformation</h3>
+
+          <p>
+            Agriculture must transition toward lower-emission practices. Regenerative agriculture, which builds soil carbon while improving soil health, can transform agricultural lands from carbon sources to carbon sinks. Precision agriculture uses data and technology to reduce inputs while maintaining yields.
+          </p>
+
+          <p>
+            Dietary shifts toward plant-based proteins reduce pressure on land and reduce methane emissions from livestock. Meat consumption does not need to be eliminated, but reduction from current levels in developed nations would substantially reduce emissions. Alternative proteins—plant-based and cultivated meat—are emerging as viable options.
+          </p>
+
+          <h3>Energy Efficiency and Behavioral Change</h3>
+
+          <p>
+            Building retrofits to improve insulation, install efficient heating and cooling systems, and use renewable energy for heating can reduce building-related emissions by 80%. Industrial processes can be optimized for efficiency. Reducing consumption of energy-intensive products reduces overall emissions.
+          </p>
+
+          <p>
+            Individual behavioral changes—reducing meat consumption, flying less, using public transportation, reducing consumption—contribute meaningfully at scale. A significant portion of the reduction in carbon emissions required by 2050 can come from behavior change, though structural changes to energy and industrial systems are essential.
+          </p>
+
+          <h3>Policy and Market-Based Solutions</h3>
+
+          <p>
+            Carbon pricing—through carbon taxes or cap-and-trade systems—can incentivize emissions reductions across the economy. Revenue from carbon pricing can fund clean energy transitions and support affected workers and communities. However, carbon prices must be sufficiently high ($50-100+ per ton) to drive meaningful change.
+          </p>
+
+          <p>
+            Regulatory standards for vehicle emissions, appliance efficiency, building codes, and industrial processes establish minimum performance requirements. Fossil fuel subsidy removal would level the playing field for renewable energy.
+          </p>
+
+          <p>
+            Investment in clean energy research and development must increase dramatically. Public funding can de-risk emerging technologies and facilitate rapid scaling once they prove viable.
+          </p>
+
+          <h3>International Cooperation</h3>
+
+          <p>
+            Climate change is a global problem requiring global coordination. The Paris Agreement framework provides a structure for international commitment, though nationally determined contributions are currently insufficient to limit warming to 1.5°C.
+          </p>
+
+          <p>
+            Wealthy nations have responsibility to provide financial support to developing nations for adaptation and mitigation, given historical emissions and current capacity. Technology transfer of clean energy solutions accelerates global transitions.
+          </p>
+
+          <div class="data-box">
+            <h4>Emissions Reduction Pathways</h4>
+            <p>To limit warming to 1.5°C, global CO₂ emissions must:</p>
+            <ul>
+              <li>Decline by 43% by 2030 (relative to 2019 levels)</li>
+              <li>Reach net-zero by approximately 2050</li>
+              <li>Achieve significant negative emissions thereafter to remove excess CO₂ from the atmosphere</li>
+            </ul>
+            <p>This requires an unprecedented mobilization of resources, technology, and political will—but is technically and economically feasible.</p>
+          </div>
+        </section>
+
+        <!-- FUTURE OUTLOOK -->
+        <section id="future">
+          <h2>Future Outlook</h2>
+
+          <h3>Projected Warming Scenarios</h3>
+
+          <p>
+            The Intergovernmental Panel on Climate Change projects future warming under different emissions scenarios. Under the highest emissions pathway (continued fossil fuel dependence), global temperatures could rise 3-4°C by 2100. Under intermediate scenarios, warming of 2-3°C is projected. Only under scenarios with aggressive emissions reductions does warming stay below 2°C.
+          </p>
+
+          <p>
+            Even with global net-zero emissions achieved by 2050, warming already "committed" by existing atmospheric CO₂ means temperatures will rise approximately another 0.3-0.4°C above current levels before stabilizing. Thus, some additional warming is unavoidable regardless of immediate action.
+          </p>
+
+          <h3>Tipping Points and Cascading Impacts</h3>
+
+          <p>
+            Climate scientists have identified potential "tipping points"—thresholds where climate systems undergo dramatic and potentially irreversible changes. The collapse of major ice sheets in Greenland or Antarctica could raise sea levels by 7+ meters. The failure of the Atlantic Meridional Overturning Circulation (which includes the Gulf Stream) could dramatically alter European climate.
+          </p>
+
+          <p>
+            Permafrost thaw releases methane and CO₂, potentially accelerating warming further. These feedback mechanisms could amplify warming beyond what simple CO₂ forcing calculations predict. The potential for cascading impacts highlights the urgency of limiting warming to prevent crossing multiple tipping points.
+          </p>
+
+          <h3>Opportunities from Action</h3>
+
+          <p>
+            While climate change presents grave challenges, vigorous climate action creates tremendous opportunities. Clean energy industries employ more workers than fossil fuel industries, with growth potential in renewable energy installation, energy efficiency retrofits, and electric vehicle manufacturing.
+          </p>
+
+          <p>
+            Improved air quality from reduced fossil fuel combustion saves hundreds of thousands of lives annually from avoiding air pollution deaths. Reduced agricultural emissions through dietary shifts can improve human health. Protecting natural ecosystems provides not only climate benefits but biodiversity, water security, and cultural benefits.
+          </p>
+
+          <p>
+            Cities redesigned for walkability and public transit become more livable and equitable. Energy independence from local renewable sources increases security and reduces geopolitical tensions over energy resources.
+          </p>
+
+          <h3>Hope and Responsibility</h3>
+
+          <p>
+            The challenge of climate change is immense, but humanity possesses the technology and resources to address it. What is required is political will to transition away from fossil fuels and restructure energy and economic systems. The Paris Agreement goal of limiting warming to 1.5-2°C remains technically achievable—barely—but requires immediate, sustained, and ambitious action beginning now.
+          </p>
+
+          <blockquote>
+            "The next ten years are critical. Every fraction of a degree of warming matters, every year of delay makes the transition more difficult and expensive, and every ton of CO₂ we emit contributes to a warmer future. Yet we possess the knowledge, technology, and resources to act. What is required now is the will to do so."
+          </blockquote>
+
+          <p>
+            Individual actions matter, but systemic change is essential. Supporting policies that price carbon, transition energy systems to renewables, protect forests, and transform agriculture is crucial. Engaging in political process, supporting candidates committed to climate action, and holding institutions accountable are vital components of addressing this challenge.
+          </p>
+
+          <p>
+            The future is not predetermined. Our choices today—whether to continue fossil fuel dependence or transition rapidly to clean energy, whether to protect forests or continue deforestation, whether to transform agriculture or maintain unsustainable practices—will determine the climate future our children inherit.
+          </p>
+        </section>
+
+      </main>
+
+    </div>
+
+    <!-- FOOTER -->
+    <footer>
+      <p>Climate Change: A Comprehensive Study</p>
+      <p class="footer-divider">✦ ✦ ✦</p>
+      <p>This educational resource presents scientific consensus on climate change based on peer-reviewed research and reports from the Intergovernmental Panel on Climate Change (IPCC).</p>
+      <p style="margin-top: 20px; font-size: 0.9em;">© 2026 Climate Wiki | Designed with Bookman Old Style Typography | All data based on scientific sources and official climate research</p>
+    </footer>
 
   </div>
 
