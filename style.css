@@ -5,26 +5,26 @@
   --bg-gradient-end: #ffffff;    /* page background */
   --surface: #ffffff;            /* page wrapper / card surface */
   --surface-alpha: rgba(255,255,255,0.95);
-  --text-primary: #0f1724;       /* main text */
+  --text-primary: #000000;       /* main text - pure black */
 
   --header-start: #ffffff;       /* header background */
   --header-end: #ffffff;         /* header background */
-  --header-text: #0f1724;        /* header text (dark) */
+  --header-text: #000000;        /* header text - pure black */
   --header-border: #ffffff;      /* header border (white) */
 
   --nav-bg: #ffffff;             /* nav background */
   --nav-text: #0055cc;           /* nav link color (blue) */
-  --nav-hover: #f0f0f0;          /* nav hover bg */
+  --nav-hover: #ffffff;          /* nav hover bg - white */
 
-  --muted-1: #0f1724;            /* text color */
-  --muted-2: #0f1724;            /* text color */
+  --muted-1: #000000;            /* text color - pure black */
+  --muted-2: #000000;            /* text color - pure black */
 
   --accent: #0055cc;             /* blue accent */
   --accent-rgb: 0,85,204;
 
   --card-bg-gradient: linear-gradient(135deg, #ffffff 0%, #ffffff 100%);
-  --image-border: #cccccc;
-  --row-hover: #f9f9f9;
+  --image-border: #ffffff;
+  --row-hover: #ffffff;
 }
 
 * {
@@ -54,7 +54,7 @@ header {
   color: var(--header-text);
   padding: 60px 40px;
   text-align: center;
-  border-bottom: 1px solid #e0e0e0;
+  border-bottom: 1px solid #ffffff;
   position: relative;
 }
 
@@ -73,19 +73,20 @@ h1 {
   margin-bottom: 15px;
   text-shadow: none;
   letter-spacing: 2px;
+  color: #000000;
 }
 
 header p {
   font-size: 1.3em;
   font-style: italic;
-  color: #0f1724;
+  color: #000000;
   margin-bottom: 10px;
 }
 
 .header-date {
   font-size: 0.9em;
-  color: #0f1724;
-  border-top: 1px solid #e0e0e0;
+  color: #000000;
+  border-top: 1px solid #ffffff;
   padding-top: 10px;
   margin-top: 15px;
   display: inline-block;
@@ -98,7 +99,7 @@ nav {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  border-bottom: 1px solid #e0e0e0;
+  border-bottom: 1px solid #ffffff;
   position: sticky;
   top: 0;
   z-index: 100;
@@ -110,7 +111,7 @@ nav a {
   padding: 18px 25px;
   text-decoration: none;
   font-size: 1.1em;
-  border-right: 1px solid #e0e0e0;
+  border-right: 1px solid #ffffff;
   transition: all 0.3s ease;
   position: relative;
 }
@@ -120,7 +121,7 @@ nav a:last-child {
 }
 
 nav a:hover {
-  background-color: #f0f0f0;
+  background-color: #ffffff;
   color: #0055cc;
   padding-left: 35px;
 }
@@ -137,18 +138,18 @@ aside {
   width: 280px;
   background: #ffffff;
   padding: 40px 25px;
-  border-right: 1px solid #e0e0e0;
+  border-right: 1px solid #ffffff;
   position: sticky;
   top: 100px;
   height: fit-content;
 }
 
 aside h3 {
-  color: #0f1724;
+  color: #000000;
   font-size: 1.3em;
   margin-bottom: 20px;
   padding-bottom: 10px;
-  border-bottom: 1px solid #e0e0e0;
+  border-bottom: 1px solid #ffffff;
 }
 
 aside ul {
@@ -173,7 +174,7 @@ aside a:hover {
   border-left: 4px solid #0055cc;
   padding-left: 18px;
   color: #0055cc;
-  background: #f9f9f9;
+  background: #ffffff;
 }
 
 /* MAIN CONTENT AREA */
@@ -189,10 +190,10 @@ section {
 
 h2 {
   font-size: 2.2em;
-  color: #0f1724;
+  color: #000000;
   margin-bottom: 25px;
   padding-bottom: 15px;
-  border-bottom: 1px solid #e0e0e0;
+  border-bottom: 1px solid #ffffff;
   position: relative;
 }
 
@@ -204,7 +205,7 @@ h2::before {
 
 h3 {
   font-size: 1.5em;
-  color: #0f1724;
+  color: #000000;
   margin-top: 30px;
   margin-bottom: 15px;
   padding-left: 20px;
@@ -216,6 +217,7 @@ p {
   margin-bottom: 18px;
   text-align: justify;
   line-height: 1.9;
+  color: #000000;
 }
 
 /* LINKS */
@@ -232,18 +234,18 @@ img {
   max-width: 100%;
   height: auto;
   margin: 30px 0;
-  border: 1px solid #e0e0e0;
+  border: 1px solid #ffffff;
   box-shadow: none;
   border-radius: 3px;
 }
 
 .image-caption {
   font-size: 0.9em;
-  color: #0f1724;
+  color: #000000;
   font-style: italic;
   margin-top: 10px;
   text-align: center;
-  border-top: 1px solid #e0e0e0;
+  border-top: 1px solid #ffffff;
   padding-top: 10px;
 }
 
@@ -256,6 +258,7 @@ ul, ol {
 li {
   margin-bottom: 12px;
   line-height: 1.8;
+  color: #000000;
 }
 
 ul li::marker {
@@ -266,7 +269,7 @@ ul li::marker {
 /* DATA BOXES */
 .data-box {
   background: #ffffff;
-  border: 1px solid #e0e0e0;
+  border: 1px solid #ffffff;
   border-left: 5px solid #0055cc;
   padding: 25px;
   margin: 25px 0;
@@ -275,7 +278,7 @@ ul li::marker {
 }
 
 .data-box h4 {
-  color: #0f1724;
+  color: #000000;
   font-size: 1.2em;
   margin-bottom: 15px;
   font-weight: bold;
@@ -291,7 +294,7 @@ ul li::marker {
 .stat-card {
   background: #ffffff;
   padding: 25px;
-  border: 1px solid #e0e0e0;
+  border: 1px solid #ffffff;
   text-align: center;
   border-radius: 3px;
   box-shadow: none;
@@ -306,7 +309,7 @@ ul li::marker {
 
 .stat-label {
   font-size: 1em;
-  color: #0f1724;
+  color: #000000;
   font-style: italic;
 }
 
@@ -317,10 +320,10 @@ blockquote {
   padding: 25px;
   margin: 30px 0;
   font-style: italic;
-  color: #0f1724;
+  color: #000000;
   font-size: 1.1em;
   box-shadow: none;
-  border: 1px solid #e0e0e0;
+  border: 1px solid #ffffff;
 }
 
 blockquote::before {
@@ -379,22 +382,24 @@ blockquote::before {
   background: #ffffff;
   padding: 20px;
   border-left: 4px solid #0055cc;
-  border: 1px solid #e0e0e0;
+  border: 1px solid #ffffff;
+  color: #000000;
 }
 
 /* FOOTER */
 footer {
   background: #ffffff;
-  color: #0f1724;
+  color: #000000;
   text-align: center;
   padding: 40px;
-  border-top: 1px solid #e0e0e0;
+  border-top: 1px solid #ffffff;
   font-size: 1em;
 }
 
 footer p {
   margin-bottom: 10px;
   text-align: center;
+  color: #000000;
 }
 
 .footer-divider {
@@ -413,21 +418,22 @@ table {
 }
 
 th {
-  background: #f0f0f0;
-  color: #0f1724;
+  background: #ffffff;
+  color: #000000;
   padding: 18px;
   text-align: left;
   font-size: 1.05em;
-  border: 1px solid #e0e0e0;
+  border: 1px solid #ffffff;
 }
 
 td {
   padding: 15px 18px;
-  border: 1px solid #e0e0e0;
+  border: 1px solid #ffffff;
+  color: #000000;
 }
 
 tr:hover {
-  background: #f9f9f9;
+  background: #ffffff;
 }
 
 /* RESPONSIVE */
@@ -439,7 +445,7 @@ tr:hover {
   aside {
     width: 100%;
     border-right: none;
-    border-bottom: 1px solid #e0e0e0;
+    border-bottom: 1px solid #ffffff;
     position: static;
   }
 
@@ -461,7 +467,7 @@ tr:hover {
 
   nav a {
     border-right: none;
-    border-bottom: 1px solid #e0e0e0;
+    border-bottom: 1px solid #ffffff;
   }
 
   .stat-grid {
